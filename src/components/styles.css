@@ -1,0 +1,39 @@
+div>h1>span {
+font-size: 80px;
+padding-left: 10px;
+font-weight:bolder;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+ 
+
+@keyframes back {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+
+img.logo-image {
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+  width: 250px; 
+  height: 200px; 
+}
+
+
+
+.first-page{
+
+ height: 100%;
+ padding-top: 120px;
+ margin-bottom: 220px;
+}
