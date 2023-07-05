@@ -28,9 +28,10 @@ import shopify from "./company/briefcase (1).png";
 import starbucks from "./company/1.png";
 import tesla from "./company/computer.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import carrent from "./tabadul.png";
+import jobit from "./move.png";
+import tripguide from "./madlibs.png";
+import ecommerce from "./ecommerce.png";
 
 export {
   logo,
@@ -62,4 +63,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  ecommerce
 };

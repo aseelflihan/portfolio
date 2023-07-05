@@ -26,6 +26,7 @@ import {
   carrent,
   jobit,
   tripguide,
+  ecommerce,
   threejs,
 } from "../assets";
 
@@ -117,15 +118,15 @@ const experiences = [
     iconBg: "#E6DEDD",
 
     points: [
-      "Responsive web design",
-      "Database management (e.g., SQL)",
-      "Frontend frameworks (e.g., React)",
-      "Proficient in HTML, CSS, JavaScript",
-      "Version control systems (e.g., Git)",
-      "Data analysis tools (e.g., R, Tableau)",
-      "Microsoft Office Suite (Word, Excel, PowerPoint)",
-      "CSS frameworks (e.g., Bootstrap, Material UI, Tailwind)",
-      "Adobe Creative Suite (Photoshop, Illustrator, After Effects)",],
+      "MS Office Suite",
+      "Adobe Creative Suite",
+      "Responsive Web Design",
+      "Version Control (Git)",
+      "Database Management (SQL)",
+      "Frontend Frameworks (React)",
+      "Data Analysis (R, Python ,PowerBI Tableau)",
+      "Web Tech Proficiency (HTML, CSS, JavaScript)",
+      "CSS Frameworks (Bootstrap, Material UI, Tailwind)",],
   },
 
 
@@ -139,68 +140,105 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Tabadul (Let's Share)",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      " is a socially-conscious platform that enables the exchange of unused items to those in need. Our site encourages waste reduction and community support by allowing users to list items they're ready to part with and enabling those in financial need to acquire them for free. ",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
+
       {
-        name: "mongodb",
+        name: "nextjs",
+        color: "teal-text-gradient",
+      },
+
+      {
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "emotion Css",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/202212-GIZ-YE-FEW/Tabadul",
   },
   {
-    name: "Job IT",
+    name: "Movflix ",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Movflix is site for sharing and discovering movies. Simple and user-friendly, it lets you browse films by categories, learn about their details from author pages, and see user ratings. Whether you're into drama, comedy, action or romance, Movflix brings all movie lovers together in one interactive space. ",
     tags: [
       {
-        name: "react",
+        name: "JavaScript",
         color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
       },
       {
         name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "HTML",
         color: "pink-text-gradient",
       },
+      {
+        name: "API",
+        color: "teal-text-gradient",
+      },
     ],
+    image: jobit,
+    source_code_link: "https://github.com/202212-GIZ-YE-FEW/movie-project-actioncode",
+  },
+  {
+    name: "E-commerce store ",
+    description:
+      "A user-centric e-commerce website that effortlessly guides visitors through a delightful shopping journey. This visually captivating platform is thoughtfully designed to ensure optimal user satisfaction and maximize sales conversions for the store.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind css",
+          color: "green-text-gradient",
+        },
+        {
+          name: "nextjs",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "API",
+          color: "teal-text-gradient",
+        },
+      ],
+    image: ecommerce,
+    source_code_link: "https://github.com/202212-GIZ-YE-FEW/react-ecommerce-reactrockstars",
+  },
+  {
+    name: "Mad Libs",
+    description:
+      "is an interactive and kid-friendly website designed to make learning fun. It uses mad libs style storytelling to teach kids about different types of words while fueling their creativity. With a variety of story themes and a vibrant, intuitive interface, Mad libs turns language learning into an exciting adventure for children. ",
+      tags: [
+        {
+          name: "JavaScript",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "css",
+          color: "green-text-gradient",
+        },
+        {
+          name: "HTML",
+          color: "pink-text-gradient",
+        },
+      ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/202212-GIZ-YE-FEW/mad-libs-tech-titans",
   },
 ];
+
+
 
 export { services, technologies, experiences, testimonials, projects };
