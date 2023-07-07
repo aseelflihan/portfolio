@@ -20,11 +20,12 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm <span> Aseel </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100 text-sm font-short text-justify`} style={{ wordSpacing: '-0.15rem', fontSize: '1.6rem' }}>
-            I harmonizing the art of programming and the science of data analysis, orchestrating an immersive experience where numbers come alive and interfaces tell stories.{" "}
-  <span className="font-bold">
-  
-  </span>
+            <p className={`${styles.heroSubText} mt-2 text-white-100 text-sm font-short  text-center md:text-left`} style={{ letterSpacing: '-0.02em', lineHeight: '1.5', fontSize: '1.25rem' }}>
+  Blending programming art and data science,
+  <br className="hidden sm:block" />
+  I orchestrate immersive experiences
+  <br className="hidden sm:block" />
+  where numbers come alive and interfaces tell stories.
 </p>
 
 

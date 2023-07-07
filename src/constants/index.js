@@ -73,7 +73,6 @@ const experiences = [
     company_name: "ADEN University",
     icon: starbucks,
     iconBg: "#383E56",
-    date: " Nov 2015 -  Nov 2020",
     points: [
       "I earned a Bachelor degree in electronic and communication engineering, equipping me with a strong foundation in technical principles and problem-solving techniques. My educational background has provided me with the knowledge and skills necessary to tackle complex challenges."
     ],
