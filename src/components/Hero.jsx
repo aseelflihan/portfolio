@@ -20,10 +20,16 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm <span> Aseel </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              I develop 3D visuals, user <br className="hidden sm:block" />
-              interfaces and web applications
-            </p>
+            <p className={`${styles.heroSubText} mt-2 text-white-100 text-sm font-short text-justify`} style={{ wordSpacing: '-0.15rem', fontSize: '1.6rem' }}>
+            I harmonizing the art of programming and the science of data analysis, orchestrating an immersive experience where numbers come alive and interfaces tell stories.{" "}
+  <span className="font-bold">
+  
+  </span>
+</p>
+
+
+
+
           </div>
 
           <div className="flex items-center mt-2">
