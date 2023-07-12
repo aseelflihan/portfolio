@@ -22,9 +22,12 @@
     "react-router-dom": "^6.8.1",
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
+    "styled-components": "^6.0.3",
     "three": "^0.153.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.22.7",
+    "@babel/plugin-syntax-decorators": "^7.22.5",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",

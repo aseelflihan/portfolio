@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import React, { useState, useEffect } from 'react';
+import { Tilt } from 'react-tilt';
+import { motion } from 'framer-motion';
+import { styles } from '../styles';
+import { github } from '../assets';
+import { SectionWrapper } from '../hoc';
+import { projects } from '../constants';
+import { fadeIn, textVariant } from '../utils/motion';
+import './bubbly-button.css';
+import BubblyButton from './BubblyButton.jsx';
 
 const ProjectCard = ({
   index,
@@ -38,7 +40,7 @@ const ProjectCard = ({
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => window.open(source_code_link, '_blank')}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
@@ -70,12 +72,22 @@ const ProjectCard = ({
   );
 };
 
+
 const Works = () => {
   const [visibleProjects, setVisibleProjects] = useState(3);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const showMoreProjects = () => {
-    setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 3);
+    setIsAnimating(true);
+    setTimeout(() => {
+      setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 3);
+      setIsAnimating(false);
+    }, 700); // Duration of the animation
   };
+
+  useEffect(() => {
+    setIsAnimating(false);
+  }, []);
 
   return (
     <>
@@ -86,7 +98,7 @@ const Works = () => {
 
       <div className='w-full flex'>
         <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
+          variants={fadeIn('', '', 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
@@ -105,18 +117,25 @@ const Works = () => {
           ))}
       </div>
 
-      {visibleProjects < projects.length && (
+      {isAnimating ? (
         <div className='text-center mt-5'>
-          <button
-            className='bg-primary text-white px-4 py-2 rounded-md'
-            onClick={showMoreProjects}
-          >
-            Show More
+          <BubblyButton className='bubbly-button' />
+          <button className='bubbly-button' disabled>
+            Loading...
           </button>
         </div>
+      ) : (
+        visibleProjects < projects.length && (
+          <div className='text-center mt-5'>
+            <BubblyButton className='bubbly-button' />
+            <button className='bubbly-button' onClick={showMoreProjects}>
+              Show More
+            </button>
+          </div>
+        )
       )}
     </>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, '');
