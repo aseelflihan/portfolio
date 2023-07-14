@@ -1,28 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 
-const BubblyButton = ({ className }) => {
-  useEffect(() => {
-    const animateButton = (e) => {
-      e.preventDefault();
-      e.currentTarget.classList.add('animate');
-      setTimeout(() => {
-        e.currentTarget.classList.remove('animate');
-      }, 700);
-    };
+const BubblyButton = ({ children, onClick }) => {
+  const [isAnimating, setIsAnimating] = useState(false);
 
-    const buttons = document.querySelectorAll(`.${className}`);
-    buttons.forEach((button) =>
-      button.addEventListener('click', animateButton)
-    );
+  const handleClick = () => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 700);
+    if(onClick) onClick();
+  };
 
-    return () => {
-      buttons.forEach((button) =>
-        button.removeEventListener('click', animateButton)
-      );
-    };
-  }, [className]);
+  const buttonClass = isAnimating ? 'bubbly-button animate' : 'bubbly-button';
 
-  return null;
+  return <button className={buttonClass} onClick={handleClick}>{children}</button>;
 };
 
 export default BubblyButton;

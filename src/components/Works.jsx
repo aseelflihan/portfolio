@@ -72,7 +72,6 @@ const ProjectCard = ({
   );
 };
 
-
 const Works = () => {
   const [visibleProjects, setVisibleProjects] = useState(3);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -119,18 +118,12 @@ const Works = () => {
 
       {isAnimating ? (
         <div className='text-center mt-5'>
-          <BubblyButton className='bubbly-button' />
-          <button className='bubbly-button' disabled>
-            Loading...
-          </button>
+          <BubblyButton disabled>Loading...</BubblyButton>
         </div>
       ) : (
         visibleProjects < projects.length && (
           <div className='text-center mt-5'>
-            <BubblyButton className='bubbly-button' />
-            <button className='bubbly-button' onClick={showMoreProjects}>
-              Show More
-            </button>
+            <BubblyButton onClick={showMoreProjects}>Show More</BubblyButton>
           </div>
         )
       )}

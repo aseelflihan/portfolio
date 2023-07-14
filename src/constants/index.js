@@ -26,8 +26,11 @@ import {
   carrent,
   jobit,
   tripguide,
+  p,
+  r,
   ecommerce,
   threejs,
+  logo2,
 } from "../assets";
 
 export const navLinks = [
@@ -215,6 +218,7 @@ const projects = [
     image: ecommerce,
     source_code_link: "https://github.com/202212-GIZ-YE-FEW/react-ecommerce-reactrockstars",
   },
+
   {
     name: "Mad Libs",
     description:
@@ -236,6 +240,61 @@ const projects = [
     image: tripguide,
     source_code_link: "https://github.com/202212-GIZ-YE-FEW/mad-libs-tech-titans",
   },
+
+  {
+    name: "Uncovering the Reality of Violence Against Women and Girls",
+    description:
+      "Python-based project analyzes global data to shed light on violence against women. By using data analysis techniques, we transform complex data into clear visualizations, aiming to inform policy decisions and promote targeted action against such violence. ",
+      tags: [
+        {
+          name: "python ",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Google Colab ",
+          color: "green-text-gradient",
+        }
+      ],
+    image: p,
+    source_code_link: "https://github.com/aseelflihan/Violence-Against-Women-and-Girls-DA_Batch1/blob/main/Violence_Against_Women_and_Girls.ipynb",
+  },
+  {
+    name: "Improve Marketing Strategy | Bellabeat",
+    description:
+      "This R-based project analyzes publicly available user data from Bellabeat, a high-tech company creating health products for women. Utilizing daily user data from 18 CSV files, we cleaned and analyzed the dataset to better understand consumer preferences and enhance Bellabeat's marketing strategy. ",
+      tags: [
+        {
+          name: "R language  ",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "jupyter notebook ",
+          color: "green-text-gradient",
+        }
+      ],
+    image: r,
+    source_code_link: "https://aseelflihan.github.io/Bellabeat.html",
+  },
+
+  {
+    name: "Diverse Logo Collection ",
+    description:
+      "This collection features a range of logos, each uniquely crafted using Adobe software, demonstrating a blend of creative styles for varied branding requirements. ",
+      tags: [
+        {
+          name: "adobe illustrator  ",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "adobe photoshop ",
+          color: "green-text-gradient",
+        }
+      ],
+    image: logo2,
+    source_code_link: "https://aseelflihan.github.io/logo.html",
+  }
+
+
 ];
 
 

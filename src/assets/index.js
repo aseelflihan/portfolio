@@ -31,6 +31,10 @@ import tesla from "./company/computer.png";
 import carrent from "./tabadul.png";
 import jobit from "./move.png";
 import tripguide from "./madlibs.png";
+import p from "./p.jpeg";
+import r from "./r.jpeg";
+import logo2 from "./logo.jpg";
+
 import ecommerce from "./ecommerce.png";
 
 export {
@@ -63,5 +67,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  p,
+  r,
+  logo2,
   ecommerce
 };
