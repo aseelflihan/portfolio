@@ -8,6 +8,7 @@ import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import './bubbly-button.css';
 import BubblyButton from './BubblyButton.jsx';
+import { useInView } from 'react-intersection-observer';
 
 const ProjectCard = ({
   index,
@@ -17,11 +18,17 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.1, 
+  });
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.2 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
+      transition={{ duration: 0.6, delay: index * 0.3 }}
     >
       <Tilt
         options={{
@@ -81,7 +88,7 @@ const Works = () => {
     setTimeout(() => {
       setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 3);
       setIsAnimating(false);
-    }, 700); // Duration of the animation
+    }, 700);
   };
 
   useEffect(() => {
