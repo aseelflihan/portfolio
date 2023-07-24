@@ -38,7 +38,7 @@ const GAListener = ({ children }) => {
     ReactGA.pageview(location.pathname + location.search);
   }, [location]);
   
-  return children;
+  return <>{children}</>;
 };
 
 export default App;
