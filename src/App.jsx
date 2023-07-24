@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { HashRouter as Router } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
@@ -16,7 +15,6 @@ const App = () => {
             <Navbar />
             <Hero />
           </div>
-          <></>
           <About />
           <Experience />
           <Tech />
@@ -32,12 +30,23 @@ const App = () => {
 }
 
 const GAListener = ({ children }) => {
-  const location = useLocation();
-  
+  const [hash, setHash] = useState(window.location.hash);
+
   useEffect(() => {
-    ReactGA.pageview(location.pathname + location.search);
-  }, [location]);
-  
+    const hashChangeHandler = () => setHash(window.location.hash);
+
+    window.addEventListener('hashchange', hashChangeHandler);
+
+    return () => {
+      window.removeEventListener('hashchange', hashChangeHandler);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log("Page viewed: ", hash);
+    ReactGA.pageview(hash);
+  }, [hash]);
+
   return <>{children}</>;
 };
 
