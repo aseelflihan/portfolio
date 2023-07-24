@@ -73,7 +73,7 @@ const Contact = () => {
             message: "",
           });
 
-          setTimeout(() => setMessage(null), 3000); // clear message after 3 seconds
+          setTimeout(() => setMessage(null), 7000); // clear message after 3 seconds
         },
         (error) => {
           setLoading(false);
