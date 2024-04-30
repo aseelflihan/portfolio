@@ -4,20 +4,7 @@
 import {
   mobile,
   backend,
-  creator,
   web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
   meta,
   skill,
   starbucks,
@@ -29,8 +16,8 @@ import {
   p,
   r,
   ecommerce,
-  threejs,
   logo2,
+  tools
 } from "../assets";
 
 export const navLinks = [
@@ -142,6 +129,29 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Our Tools ",
+    description:
+      " Welcome to Our Tools, a diverse suite of applications designed to simplify tasks and enhance productivity. Our tools include PDF text unlocking, point sorting, Arabic to English numeral conversion, case conversion, text formatting, WhatsApp message cleaning, automatic period addition, email extraction, date standardization, PDF to image conversion, and advanced text extraction from images. ",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+
+      {
+        name: "nextjs",
+        color: "teal-text-gradient",
+      },
+
+      {
+        name: "React",
+        color: "green-text-gradient",
+      }
+    ],
+    image: tools,
+    source_code_link: "https://github.com/202212-GIZ-YE-FEW/Tabadul",
+  },
+  {
     name: "Tabadul (Let's Share)",
     description:
       " is a socially-conscious platform that enables the exchange of unused items to those in need. Our site encourages waste reduction and community support by allowing users to list items they're ready to part with and enabling those in financial need to acquire them for free. ",
@@ -168,6 +178,8 @@ const projects = [
     image: carrent,
     source_code_link: "https://github.com/202212-GIZ-YE-FEW/Tabadul",
   },
+
+
   {
     name: "Movflix ",
     description:

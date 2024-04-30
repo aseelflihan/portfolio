@@ -19,8 +19,8 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true, 
-    threshold: 0.1, 
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
   return (
@@ -29,6 +29,7 @@ const ProjectCard = ({
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
       transition={{ duration: 0.6, delay: index * 0.3 }}
+      className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
     >
       <Tilt
         options={{
@@ -36,7 +37,6 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -61,7 +61,16 @@ const ProjectCard = ({
 
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <div className='overflow-hidden'>
+            <p className='mt-2 text-secondary text-[14px]' style={{
+              maxHeight: '10.3em', // Adjusted for more text
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              display: '-webkit-box',
+              WebkitLineClamp: 9, // Increased number of lines before truncating
+              WebkitBoxOrient: 'vertical',
+            }} title={description}>{description}</p>
+          </div>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>

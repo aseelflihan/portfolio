@@ -34,6 +34,8 @@ import tripguide from "./madlibs.png";
 import p from "./p.jpeg";
 import r from "./r.jpeg";
 import logo2 from "./logo.jpg";
+import tools from "./tools.png";
+
 
 import ecommerce from "./ecommerce.png";
 
@@ -70,5 +72,6 @@ export {
   p,
   r,
   logo2,
-  ecommerce
+  ecommerce,
+  tools
 };
